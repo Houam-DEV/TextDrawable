@@ -53,7 +53,7 @@ public class TextDrawable extends ShapeDrawable {
         borderThickness = builder.borderThickness;
         borderColor = builder.borderColor;
         borderPaint = new Paint();
-        borderPaint.setColor(borderColor != -1 ? borderColor : getDarkerShade(color));
+        borderPaint.setColor(borderColor != Integer.MAX_VALUE ? borderColor : getDarkerShade(color));
         borderPaint.setStyle(Paint.Style.STROKE);
         borderPaint.setStrokeWidth(borderThickness);
 
@@ -171,7 +171,7 @@ public class TextDrawable extends ShapeDrawable {
             color = Color.GRAY;
             textColor = Color.WHITE;
             borderThickness = 0;
-            borderColor = -1;
+            borderColor = Integer.MAX_VALUE;
             width = -1;
             height = -1;
             shape = new RectShape();
